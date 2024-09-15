@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=chrome">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head> 
+  <body>  
+  <h1>날짜 형식 변환</h1>
+  <h2 id="date"></h2>
+    <script>
+       let value = prompt("날짜를 입력해주세요")
+       console.log(value)
+       const date = document.getElementById("date")
+       date.textContent += value.substring(0, 4) + "년" + value.substring(5, 6) + "월 " + value.substring(7, 8) + "일입니다."
+    </script>   
+</body>
+
+</html

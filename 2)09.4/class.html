@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        .yellowBox{
+            background-color: yellow;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="h1">섹션의 내용입니다.</h1>
+    <h1>섹션의 내용입니다.</h1>
+    <h1>섹션의 내용입니다.</h1>
+    <input class="" type="button" value="클래스추가" id="plus">
+    <input class="" type="button" value="클래스제거" id="remove">
+    <input class="" type="button" value="클래스토글" id="toggle">
+<script>
+    const h = document.getElementById("h1");
+    const h1 = document.querySelectorAll("h1");
+    const plus = document.getElementById("plus");
+    const remove = document.getElementById("remove");
+    const toggle = document.getElementById("toggle");
+
+    plus.addEventListener("click", ()=>{
+        h1[0].classList.add("yellowBox")
+    })
+    remove.addEventListener("click", ()=>{
+        h1[0].classList.remove("yellowBox")
+    })
+    toggle.addEventListener("click", ()=>{
+        h1.forEach((element)=>{
+            element.classList.toggle("yellowBox");
+        })
+    })
+</script>
+</body>
+</html>

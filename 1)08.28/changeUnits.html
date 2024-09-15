@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head> 
+  <body>  
+  <h1>인치 단위 환산</h1>
+  <h2 id = "result"></h2>
+
+    <script>
+        let value = prompt("inch 단위의 숫자를 입력해주세요")
+        const result = document.getElementById("result")
+        alert(`${value}inch는 ${value*2.54}cm입니다`)
+        result.innerHTML = `${value}inch는 ${value*2.54}cm입니다`
+		
+		// 도큐먼트 라이트 활용 document.write(`${value}inch는 ${value*2.54}cm입니다`)
+    </script>   
+</body>
+
+</html>

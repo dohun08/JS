@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            flex-direction: column;
+            justify-content: space-around;
+            height: 300px;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head> 
+  <body>  
+    <form id="form">
+        <div>
+            <label>문자열 입력</label>
+            <input type="text" id="input">
+        </div>
+        <div>
+            <label>결과</label>
+            <input type="text" id="result" readonly>
+        </div>
+        <p id="console"></p>
+        <input type="button" class="btn btn-primary" onclick="show(event)" value="문자열 추출하기">
+        <input type="button" class="btn btn-primary" onclick="reset(event)" value="reset">
+        <input type="button" class="btn btn-primary" onclick="upper()" value="대문자변환">
+        <input type="button" class="btn btn-primary" onclick="trim()" value="문자열 공백제거">
+        <input type="button" class="btn btn-primary" onclick="len()" value="문자열 길이">
+        <input type="button" class="btn btn-primary" onclick="plus()" value="문자열 합치기">
+    </form>
+    <script>
+        const input = document.getElementById("input")
+        const form = document.getElementById("form");
+        let result = document.getElementById("result")
+        const show = (event)=>{
+            let value= input.value;
+            result.value = value.substring(0, 4) + "년" + value.substring(4, 6) + "월" + value.substring(6, 9) + "일 입니다."
+            if(result.value === input.value){
+                document.getElementById("console").innerHTML = "성공적으로 결과가 처리되었습니다."
+            }
+        }
+        const reset = (event)=>{
+            input.value = null;
+        }
+        const upper = ()=>{
+            result.value = input.value.toUpperCase()
+        }
+        const trim = ()=>{
+            result.value = input.value.split(' ');
+        }
+        const len = ()=>{
+            result.value = input.value.length
+        }
+        const plus = ()=>{
+            let s = prompt('합칠 문자를 입력해주세요')
+            result.value = input.value+s;
+        }
+    </script>
+  </body>
+
+</html>

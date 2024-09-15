@@ -1,0 +1,31 @@
+<html>
+<head><style>#demo{border:1px solid #ccc; background:lightyellow;width:400px;}</style>
+    <meta charset="UTF-8">
+</head>
+<body>
+<h2>JavaScript For In</h2>
+<p>The for in statement can loops over array values:</p>
+<div id="demo">
+    <ul id="demoUL">
+
+    </ul>
+</div>
+<script>
+    const numbers = [45, 4, 9, 16, 25];
+    const cars = ["BMW", "VOLVO", "MINI"]
+    const ul = document.getElementById("demoUL")
+    let sum = 0
+    numbers.forEach((value)=>{
+        sum+=value
+    })
+    let txt = "<ul>";
+    for (let idx in numbers) {
+        txt += "<li>" + numbers[idx] + "</li>";
+    }
+    txt+="<li> 합계 :" + sum + "</li>";
+    document.getElementById("demo").innerHTML = txt + "</ul>";
+
+    console.log(sum)
+</script>
+</body>
+</html>
