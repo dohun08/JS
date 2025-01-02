@@ -1,0 +1,36 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+input{
+  padding: 5px 20px;
+  width: 60%;
+  border-radius: 8px;
+  border: 1px solid #737373;
+}
+button{
+  padding: 5px;
+  border-radius: 8px;
+  border: 1px solid #737373;
+}
+@keyframes BByong {
+  0%{
+    opacity: 0.5;
+    margin-bottom: 30px;
+  }
+  100%{
+    opacity: 1;
+    margin-bottom: 0;
+  }
+}
+.modal{
+  width: max-content;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 0 20px;
+  border: 1px solid black;
+  border-radius: 8px;
+  animation: BByong 0.5s ease-in-out;
+}
